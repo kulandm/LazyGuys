@@ -11,14 +11,20 @@
     <div id="header">
         <div>LAZY GUYS...</div>
     </div>
-    <div id="banner">
+    <div id="banner" class="visible-lg">
     </div>
     <!--<div id="action-container">
         <div class="takeoff action"><a href="#"><img src="takeoff.png"></a></div>
         <div class="land action"><a href="#"><img src="land.png"></a></div>
         <div class="search action"><a href="#"><img src="search.png"></a></div>
     </div>-->
-    <div class="row">
+    <div class="row visible-lg">
+      <div class="col-md-4 takeoff action"><a href="#" data-action="drone" data-param="takeoff"><img src="takeoff.png"></a></div>
+      <div class="col-md-4 land action"><a href="#" data-action="drone" data-param="land"><img src="land.png"></a></div>
+      <div class="col-md-4 search action"><a href="#" data-toggle="modal" data-target="#myModal"><img src="search.png"></a></div>
+    </div>
+
+    <div class="row hidden-lg">
       <div class="col-md-4 takeoff action"><a href="#" data-action="drone" data-param="takeoff"><img src="takeoff.png"></a></div>
       <div class="col-md-4 land action"><a href="#" data-action="drone" data-param="land"><img src="land.png"></a></div>
       <div class="col-md-4 search action"><a href="#" data-toggle="modal" data-target="#myModal"><img src="search.png"></a></div>
@@ -90,6 +96,9 @@ body {
     position: relative;
     text-align: center;
     top: -70px;
+}
+.hidden-lg .action {
+  top:20px;
 }
 .action img {
     width: 40%;
